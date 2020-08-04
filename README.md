@@ -8,6 +8,7 @@ More information:
 - Architecture: MVVM  
 - Reactive Programming: RxKotlin  
 - Communication: LiveData  
+- Dependency Injection: Koin  
 - Layers: View > ViewModel > UseCase > Repository > Service  
 - Tests: Unit tests with JUnit and mock with Mockito and Robolectric  
 - Build/Test Automation: Fastlane  
