@@ -1,5 +1,5 @@
-Laboratory project for architecture, language, modularization and auxiliary libs tests, 
-with the intention of being a scaffold for scalable projects.
+Laboratory project for architecture, language, modularization and auxiliary libs tests,  
+with a focus on scalability, performance and testability.
 
 To run Unit Tests with Fastlane run "fastlane test".
 
