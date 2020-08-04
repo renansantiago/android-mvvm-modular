@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="movie" type="br.com.renansantiago.domain.model.Movie"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_root"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_banner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_name"
+                app:layout_constraintWidth_percent="0.3"
+                app:loadImageUrl="@{movie.imageUrl}"/>
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@{movie.title}"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_banner"
+                app:layout_constraintHeight_percent="0.6"
+                tools:text="Movie Title"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_star"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1.1"
+                app:srcCompat="@drawable/ic_star"
+                android:tint="@{movie.favorite ? @color/yellow : @color/grey}"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_banner"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="movies_title">Movies</string>
+
+    <string name="favorite_movies_title">Favorite Movies</string>
+
+    <string name="save_to_favorites">Want to save %s to favorites?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>

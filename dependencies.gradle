@@ -1,0 +1,126 @@
+ext {
+    applicationId = 'br.com.renansantiago.mvvmmodular'
+
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+
+    //App version
+    versionMajor = 1 //Very big new feature or New app design
+    versionMinor = 0 //New feature
+    versionPatch = 0 //Bug fix
+    versionName = "$versionMajor.$versionMinor.$versionPatch"
+    versionCode = 1
+    //
+
+    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+    supportVersion = "28.0.0"
+    constraintVersion = "1.1.3"
+
+    archVersion = "1.1.1"
+
+    koinVersion = "1.0.2"
+
+    rxKotlinVersion = "2.2.0"
+    rxAndroidVersion = "2.0.2"
+
+    retrofitVersion = "2.4.0"
+    rxRetrofitVersion = "2.3.0"
+    retrofitLogVersion = "3.8.1"
+
+    picassoVersion = "2.71828"
+
+    junitVersion = "4.12"
+    runnerVersion = "1.0.2"
+    espressoVersion = "3.0.2"
+    mockitoKotlinVersion = "2.1.0"
+    robolectricVersion = "4.1"
+
+    appDependencies = [
+            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            appCompat             : "com.android.support:appcompat-v7:$supportVersion",
+            constraint            : "com.android.support.constraint:constraint-layout:$constraintVersion",
+            design                : "com.android.support:design:$supportVersion",
+            cardView              : "com.android.support:cardview-v7:$supportVersion",
+            archLifecyle          : "android.arch.lifecycle:extensions:$archVersion",
+            koin                  : "org.koin:koin-android:$koinVersion",
+            koinViewModel         : "org.koin:koin-android-viewmodel:$koinVersion",
+            rxKotlin              : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$rxRetrofitVersion",
+            retrofitLog           : "com.squareup.okhttp3:logging-interceptor:$retrofitLogVersion",
+            room                  : "android.arch.persistence.room:runtime:$archVersion",
+            rxRoom                : "android.arch.persistence.room:rxjava2:$archVersion",
+            roomCompiler          : "android.arch.persistence.room:compiler:$archVersion",
+            picasso               : "com.squareup.picasso:picasso:$picassoVersion"
+    ]
+
+    appTestDependencies = [
+            junit        : "junit:junit:$junitVersion",
+            runner       : "com.android.support.test:runner:$runnerVersion",
+            espresso     : "com.android.support.test.espresso:espresso-core:$espressoVersion",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion",
+            archCore     : "android.arch.core:core-testing:$archVersion",
+            koin         : "org.koin:koin-test:$koinVersion",
+            robolectric  : "org.robolectric:robolectric:$robolectricVersion"
+    ]
+
+    presentationDependencies = [
+            kotlin       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            appCompat    : "com.android.support:appcompat-v7:$supportVersion",
+            constraint   : "com.android.support.constraint:constraint-layout:$constraintVersion",
+            design       : "com.android.support:design:$supportVersion",
+            cardView     : "com.android.support:cardview-v7:$supportVersion",
+            archLifecyle : "android.arch.lifecycle:extensions:$archVersion",
+            koin         : "org.koin:koin-android:$koinVersion",
+            koinViewModel: "org.koin:koin-android-viewmodel:$koinVersion",
+            rxKotlin     : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid    : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            picasso      : "com.squareup.picasso:picasso:$picassoVersion"
+    ]
+
+    presentationTestDependencies = [
+            junit        : "junit:junit:$junitVersion",
+            runner       : "com.android.support.test:runner:$runnerVersion",
+            espresso     : "com.android.support.test.espresso:espresso-core:$espressoVersion",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion",
+            archCore     : "android.arch.core:core-testing:$archVersion",
+            koin         : "org.koin:koin-test:$koinVersion",
+            robolectric  : "org.robolectric:robolectric:$robolectricVersion"
+    ]
+
+    domainDependencies = [
+            kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    ]
+
+    domainTestDependencies = [
+            junit        : "junit:junit:$junitVersion",
+            runner       : "com.android.support.test:runner:$runnerVersion",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    ]
+
+    dataDependencies = [
+            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            rxKotlin              : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$rxRetrofitVersion",
+            retrofitLog           : "com.squareup.okhttp3:logging-interceptor:$retrofitLogVersion",
+            room                  : "android.arch.persistence.room:runtime:$archVersion",
+            rxRoom                : "android.arch.persistence.room:rxjava2:$archVersion",
+            roomCompiler          : "android.arch.persistence.room:compiler:$archVersion"
+    ]
+
+    dataTestDependencies = [
+            junit        : "junit:junit:$junitVersion",
+            runner       : "com.android.support.test:runner:$runnerVersion",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion",
+            archCore     : "android.arch.core:core-testing:$archVersion"
+    ]
+}

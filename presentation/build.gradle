@@ -1,0 +1,76 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+    }
+
+    buildFeatures {
+        dataBinding true
+
+        // for view binding:
+        // viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def dependencies = rootProject.ext.presentationDependencies
+    def testDependencies = rootProject.ext.presentationTestDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation dependencies.kotlin
+
+    implementation dependencies.appCompat
+    implementation dependencies.constraint
+    implementation dependencies.design
+    implementation dependencies.cardView
+
+    implementation dependencies.archLifecyle
+
+    implementation dependencies.koin
+    implementation dependencies.koinViewModel
+
+    implementation dependencies.rxKotlin
+    implementation dependencies.rxAndroid
+
+    implementation dependencies.picasso
+
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.runner
+    androidTestImplementation testDependencies.espresso
+
+    testImplementation testDependencies.mockitoKotlin
+
+    testImplementation testDependencies.koin
+
+    testImplementation testDependencies.archCore
+
+    testImplementation testDependencies.robolectric
+
+    implementation project(':domain')
+}
