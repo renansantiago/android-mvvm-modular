@@ -8,6 +8,7 @@ More information:
 - Architecture: MVVM  
 - Reactive Programming: RxKotlin  
 - Communication: LiveData  
+- Data Persistence: Room  
 - Dependency Injection: Koin  
 - Layers: View > ViewModel > UseCase > Repository  
 - Tests: Unit tests with JUnit and mock with Mockito and Robolectric  
